@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './App.module.css';
 import { Cards, Chart, CountryPicker } from './Components';
 import { fetchData } from './api'
-import Logo from './Images/image.png';
+
 
 class App extends React.Component {
 
@@ -31,9 +31,11 @@ class App extends React.Component {
 
       return (
          <div className={styles.container}>
-            <img src={Logo} className={styles.logo} alt='Covid Tracker App'/>
+            <header>
+               <h1 className={styles.title}>COVID-19 Tracker</h1>
+               <CountryPicker handleCountryChange={this.handleCountryChange} />
+            </header>
             <Cards data={data} />
-            <CountryPicker handleCountryChange={this.handleCountryChange} />
             <Chart data={data} country={country} />
          </div>
       )

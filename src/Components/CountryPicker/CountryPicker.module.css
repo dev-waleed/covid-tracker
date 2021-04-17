@@ -1,5 +1,6 @@
 .formControl {
    background-color: white;
    width: 30%;
+   min-width: 50%;
    margin-bottom: 30px !important;
 }
